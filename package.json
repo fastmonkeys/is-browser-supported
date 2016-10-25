@@ -1,0 +1,36 @@
+{
+  "name": "is-browser-supported",
+  "version": "1.0.0",
+  "description": "Check if user agent string matches with browser criterias like in Autoprefixer",
+  "license": "MIT",
+  "repository": "fastmonkeys/is-browser-supported",
+  "author": {
+    "name": "Janne Vanhala",
+    "email": "janne@fastmonkeys.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "eslint . && mocha test.js"
+  },
+  "keywords": [
+    "agent",
+    "browser",
+    "browser version",
+    "user-agent",
+    "user agent",
+    "useragent",
+    "version"
+  ],
+  "dependencies": {
+    "browserslist": "^1.4.0",
+    "useragent": "^2.1.9"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb-base": "^9.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "mocha": "^3.1.2"
+  }
+}
