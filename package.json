@@ -11,7 +11,10 @@
   "engines": {
     "node": ">=4"
   },
+  "browser": "./dist/is-browser-supported.js",
   "scripts": {
+    "build": "webpack",
+    "prepublish": "npm run build",
     "test": "eslint . && mocha test.js"
   },
   "keywords": [
@@ -25,12 +28,15 @@
   ],
   "dependencies": {
     "browserslist": "^1.4.0",
-    "useragent": "^2.1.9"
+    "ua-parser-js": "github:faisalman/ua-parser-js#51b8089958ea0bf53a7433c9439233b13bcbae5e"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.13",
     "eslint": "^3.8.1",
     "eslint-config-airbnb-base": "^9.0.0",
     "eslint-plugin-import": "^2.0.1",
-    "mocha": "^3.1.2"
+    "json-loader": "^0.5.4",
+    "mocha": "^3.1.2",
+    "webpack": "^1.13.2"
   }
 }

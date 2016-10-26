@@ -85,11 +85,6 @@ describe('isBrowserSupported()', function () {
       expected: true
     },
     {
-      userAgent: 'Mozilla/5.0 (Linux; Android 6.0.1; SAMSUNG SM-G920F Build/MMB29K) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/4.0 Chrome/44.0.2403.133 Mobile Safari/537.36',
-      selections: 'samsung >= 4',
-      expected: true
-    },
-    {
       userAgent: 'Googlebot/2.1 (+http://www.google.com/bot.html)',
       expected: false
     }
