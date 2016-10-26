@@ -1,24 +1,31 @@
 var browserslist = require('browserslist');
-var useragent = require('useragent');
+var parser = require('ua-parser-js');
 
-function getBrowserName(family) {
-  var browserNames = {
-    'BlackBerry WebKit': 'bb',
-    'Chrome Mobile': 'and_chr',
-    'Firefox Mobile': 'and_ff',
-    'IE Mobile': 'ie_mob',
-    'Mobile Safari': 'ios_saf',
-    'Opera Mobile': 'op_mob',
-    'Samsung Internet': 'samsung',
-    'UC Browser': 'and_uc'
-  };
-  return browserNames[family] || family;
+function getBrowserName(agent) {
+  if (agent.browser.name === 'Android Browser') {
+    return 'android';
+  } else if (agent.os.name === 'BlackBerry') {
+    return 'bb';
+  } else if (agent.browser.name === 'Chrome' && agent.os.name === 'Android') {
+    return 'and_chr';
+  } else if (agent.browser.name === 'Firefox' && agent.os.name === 'Android') {
+    return 'and_ff';
+  } else if (agent.browser.name === 'IEMobile') {
+    return 'ie_mob';
+  } else if (agent.browser.name === 'Opera Mobi') {
+    return 'op_mob';
+  } else if (agent.browser.name === 'Safari' && agent.os.name === 'iOS') {
+    return 'ios_saf';
+  } else if (agent.browser.name === 'UCBrowser') {
+    return 'and_uc';
+  }
+  return agent.browser.name;
 }
 
 function getBrowserVersionFromUserAgent(userAgent) {
-  var agent = useragent.parse(userAgent);
-  var version = [agent.major, agent.minor, agent.patch];
-  var browserName = getBrowserName(agent.family);
+  var agent = parser(userAgent);
+  var version = (agent.browser.version || agent.os.version || '').split('.');
+  var browserName = getBrowserName(agent);
   while (version.length > 0) {
     try {
       return browserslist(browserName + ' ' + version.join('.'))[0];

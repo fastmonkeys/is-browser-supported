@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "browserslist": "^1.4.0",
-    "useragent": "^2.1.9"
+    "ua-parser-js": "github:faisalman/ua-parser-js#51b8089958ea0bf53a7433c9439233b13bcbae5e"
   },
   "devDependencies": {
     "eslint": "^3.8.1",
