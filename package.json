@@ -1,6 +1,6 @@
 {
   "name": "is-browser-supported",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Check if user agent string matches with browser criterias like in Autoprefixer",
   "license": "MIT",
   "repository": "fastmonkeys/is-browser-supported",
