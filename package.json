@@ -27,8 +27,8 @@
     "version"
   ],
   "dependencies": {
-    "browserslist": "^1.4.0",
-    "ua-parser-js": "github:faisalman/ua-parser-js#51b8089958ea0bf53a7433c9439233b13bcbae5e"
+    "browserslist": "^2.3.3",
+    "ua-parser-js": "^0.7.14"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.13",
