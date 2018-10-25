@@ -27,7 +27,7 @@
     "version"
   ],
   "dependencies": {
-    "browserslist": "^2.3.3",
+    "browserslist": "^4.3.3",
     "ua-parser-js": "^0.7.14"
   },
   "devDependencies": {
